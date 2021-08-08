@@ -83,7 +83,7 @@ public class HelloClassLoader extends ClassLoader {
       Method declaredMethod = aClass.getDeclaredMethod(methodName);
       declaredMethod.invoke(instance);
     } catch (Exception e) {
-      e.printStackTrace();
+      throw new RuntimeException("error",e);
     }
   }
 
