@@ -1,3 +1,6 @@
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * @author xiaohuajun
  * @version 1.0
@@ -5,5 +8,19 @@
  * @description Person
  */
 public class Person {
+
+
+  public static Map<String,Object> map  = new HashMap<>();
+
+  private String name;
+
+
+
+  public static void main(String[] args) {
+      String ss = "2";
+
+
+  }
+
 
 }
