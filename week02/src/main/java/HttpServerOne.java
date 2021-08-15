@@ -19,7 +19,7 @@ public class HttpServerOne {
         Socket socket = serverSocket.accept();
         server(socket);
       } catch (IOException e) {
-       throw  new RuntimeException(e.getMessage());
+        e.printStackTrace();
       }
     }
   }

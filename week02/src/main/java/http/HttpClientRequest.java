@@ -1,9 +1,11 @@
 package http;
 
 import java.io.IOException;
+import java.util.Map;
 import org.apache.http.HttpEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
@@ -21,11 +23,11 @@ public class HttpClientRequest {
 
   public static void main(String[] args) {
     String url = "http://localhost:8801";
-    System.out.println(httpRequest(url));
+    System.out.println(httpGetRequest(url));
   }
 
 
-  public static String httpRequest(String url) {
+  public static String httpGetRequest(String url) {
     // 创建 HttpClient 客户端
     CloseableHttpClient httpClient = HttpClients.createDefault();
     // 创建 HttpGet 请求
