@@ -12,7 +12,7 @@ import java.net.Socket;
 public class HttpServerOne {
 
 
-  public static void main(String[] args) throws IOException{
+  public static void main(String[] args) throws IOException {
     ServerSocket serverSocket = new ServerSocket(8801);
     while (true) {
       try {
@@ -25,9 +25,9 @@ public class HttpServerOne {
   }
 
 
-  public static void server(Socket socket){
+  public static void server(Socket socket) {
     try {
-      PrintWriter printWriter = new PrintWriter(socket.getOutputStream(),true);
+      PrintWriter printWriter = new PrintWriter(socket.getOutputStream(), true);
       printWriter.println("HTTP/1.1 200 OK");
       printWriter.println("Content-Type:text/html;charset=utf-8");
       String body = "hello,http";
@@ -37,7 +37,7 @@ public class HttpServerOne {
       printWriter.close();
       socket.close();
     } catch (IOException e) {
-      throw new RuntimeException("网络异常",e);
+      throw new RuntimeException("网络异常", e);
     }
   }
 
